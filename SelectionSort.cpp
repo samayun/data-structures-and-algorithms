@@ -3,22 +3,24 @@ using namespace std;
 
 
 int selectionSort(int A[] , int size, int type ){
-  int i,j,smallest;
+  int i,j, minMax;
   for(j=0; j< size; j++){
-    smallest = j;
+    minMax = j;
     for(i=j+1; i < size; i++){
-      if(A[i] < A[smallest]){
-        smallest = i;
+      if(A[i] < A[minMax]){
+        minMax = i;
       }
     }
+    // 1 for MAX value
     if(type == 1){
-      swap(A[j] , A[smallest]);
+      swap(A[j] , A[minMax]);
     } else {
-      swap(A[i] , A[smallest]);
+      // 0 for MIN value
+      swap(A[i] , A[minMax]);
     }
     
   }
-  return A[smallest];
+  return A[minMax];
 }
 
 int main() {
