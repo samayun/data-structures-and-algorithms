@@ -1,6 +1,9 @@
+// Author: Samayun Chowdhury
+// Source Code: https://github.com/samayun/data-structures-and-algorithms/blob/master/queue.cpp
+
 #include <iostream>
 
-const int MAX_SIZE = 5; // Maximum size of the queue
+const int MAX_SIZE = 10;
 
 class Queue {
 private:
@@ -21,7 +24,7 @@ public:
 
     void enqueue(int value) {
         if (isFull()) {
-            std::cout << "Queue is full. Cannot enqueue element." << std::endl;
+            std::cout << "Queue is full" << std::endl;
             return;
         }
         if (isEmpty()) {
@@ -34,7 +37,7 @@ public:
 
     void dequeue() {
         if (isEmpty()) {
-            std::cout << "Queue is empty. Cannot dequeue element." << std::endl;
+            std::cout << "Queue is empty" << std::endl;
             return;
         }
         std::cout << "Dequeued element: " << arr[front] << std::endl;
@@ -59,20 +62,18 @@ public:
 };
 
 int main() {
-    Queue myQueue;
+    Queue samuQueue;
 
-    myQueue.enqueue(10);
-    myQueue.enqueue(20);
-    myQueue.enqueue(30);
-    myQueue.enqueue(40);
-    myQueue.enqueue(50);
+    samuQueue.enqueue(99);
+    samuQueue.enqueue(17);
 
-    myQueue.display();
 
-    myQueue.dequeue();
-    myQueue.dequeue();
+    samuQueue.display();
 
-    myQueue.display();
+    samuQueue.dequeue();
+    samuQueue.dequeue();
+
+    samuQueue.display();
 
     return 0;
 }
