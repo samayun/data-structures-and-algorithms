@@ -6,3 +6,4 @@
 - [BubbleSort](./BubbleSort.md)
 - [InsertionSort](./InsertionSort.md)
 - [SelectionSort](./SelectionSort.md)
+- [MST](./PRISM.cpp)
